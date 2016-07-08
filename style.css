@@ -1,0 +1,46 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding-left: 30%;
+	padding-right: 30%;
+}
+
+button {
+	padding: 3px;
+}
+
+#input {
+	padding: 1em 0;
+}
+
+#input button {
+	margin-left: 1em;
+}
+
+.picbox {
+	width: 100%;
+}
+
+.picbox img {
+	width: 100%;
+	padding-bottom: .5em;
+}
+
+.likebox{
+	float: left;
+	display: inline;
+	padding-bottom: .5em;
+}
+
+.deletebutton{
+	float: right;
+}
