@@ -59,11 +59,11 @@
 			this.model = model
 			this.el = $('<div/>').attr({class: 'picbox'});
 			var _this = this;
-			this.el.on('click', function(e){
+			_this.el.on('click', function(e){
 				if($(e.target).is('.likebutton')){
 					var x = _this.model.get('likes') + 1;
 					_this.model.set({likes: x});
-					$('.likebutton').text(_this.model.get('likes'));
+					_this.likebutton.text(_this.model.get('likes'));
 				}
 				if($(e.target).is('.deletebutton')){
 					_this.model.destroy();
@@ -77,13 +77,13 @@
 			_this.el.append($('<img/>').attr({src: _this.model.get('url')}));
 			var likes = $('<div/>').attr({class: 'likebox'}).text('Likes: ');
 			_this.el.append(likes);
-			var likebutton = $('<button/>').text(_this.model.get('likes')).attr({class: 'likebutton'});
+			_this.likebutton = $('<button/>').text(_this.model.get('likes')).attr({class: 'likebutton'});
 			// likebutton.on('click', function(){
 			// 	var x = _this.model.get('likes') + 1;
 			// 	_this.model.set({likes: x});
 			// 	_this.render();
 			// })
-			likes.append(likebutton);
+			likes.append(_this.likebutton);
 			var deletebutton = $('<button/>').text('Delete').attr({class: 'deletebutton'});
 			// deletebutton.on('click', function(){
 			// 	_this.model.destroy();
